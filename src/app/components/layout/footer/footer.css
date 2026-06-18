@@ -1,0 +1,50 @@
+.footer {
+
+  background: #050505;
+
+  border-top:
+    1px solid rgba(255,255,255,.08);
+
+  padding:
+    var(--space-xl)
+    var(--space-lg);
+}
+
+.footer__container {
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: var(--space-lg);
+}
+
+.footer h3 {
+
+  color: white;
+
+  margin-bottom: .5rem;
+}
+
+.footer p {
+
+  color:
+    rgba(255,255,255,.7);
+}
+
+@media (max-width: 768px) {
+
+  .footer__container {
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+}

@@ -8,7 +8,7 @@ import { FeaturesSection } from "../../components/sections/features-section/feat
 import { HelpSection } from "../../components/sections/help-section/help-section";
 @Component({
   selector: 'app-home',
-  imports: [HeroJornadaSection, ObjetivoSection, VentajasSection, FeaturesSection, HelpSection],
+  imports: [HeroJornadaSection, ObjetivoSection, VentajasSection, FeaturesSection, HelpSection, Navbar, Footer],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
