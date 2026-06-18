@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/control-horario-tt/browser",
+    "public": "dist/control-horario/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
