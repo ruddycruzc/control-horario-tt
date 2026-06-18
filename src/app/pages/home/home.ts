@@ -5,7 +5,7 @@ import { Footer } from "../../components/layout/footer/footer";
 
 @Component({
   selector: 'app-home',
-  imports: [Navbar, HeroJornadaSection, Footer],
+  imports: [HeroJornadaSection],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

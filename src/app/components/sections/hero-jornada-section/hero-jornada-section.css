@@ -1,6 +1,6 @@
 .hero-jornada {
 
-  min-height: 80vh;
+  min-height: 100vh;
 
   background: #000;
 
@@ -11,7 +11,7 @@
   justify-content: center;
 
   padding:
-    var(--space-2xl)
+    var(--space-xl)
     var(--space-lg);
 }
 
@@ -19,7 +19,7 @@
 
   width: 100%;
 
-  max-width: 1300px;
+  max-width: 1400px;
 
   display: grid;
 
@@ -35,27 +35,41 @@
 
   color: white;
 
-  font-size: 4rem;
+  font-size:
+    clamp(4rem, 8vw, 8rem);
 
-  font-family: monospace;
+  font-family:
+    monospace;
 
   font-weight: 300;
+
+  line-height: 1;
+}
+
+.hero-jornada__content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--space-md);
 }
 
 .hero-jornada__badge {
 
   color: var(--color-primary);
 
-  font-weight: 800;
+  font-weight: 700;
 
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 .hero-jornada__title {
 
   color: white;
 
-  font-size: 5.5rem;
+  font-size:
+    clamp(4rem, 10vw, 8rem);
 
   line-height: 0.9;
 
@@ -66,17 +80,71 @@
 
   display: inline-block;
 
-  padding-left: 50px;
+  padding-left: 3rem;
 }
 
 .hero-jornada__indent-l {
 
   display: inline-block;
 
-  padding-left: 120px;
+  padding-left: 8rem;
 }
 
 .text-pink {
 
   color: var(--color-primary);
+}
+
+.hero-jornada__cursor {
+
+  color: var(--color-primary);
+
+  animation:
+    blink .7s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+
+    opacity: 1;
+  }
+
+  50% {
+
+    opacity: 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .hero-jornada__container {
+
+    grid-template-columns:
+      1fr;
+
+    text-align: center;
+  }
+
+  .hero-jornada__indent-j,
+  .hero-jornada__indent-l {
+
+    padding-left: 0;
+  }
+
+  .hero-jornada__clock {
+
+    order: 2;
+
+    font-size:
+      clamp(3rem, 12vw, 5rem);
+  }
+
+  .hero-jornada__content {
+
+    order: 1;
+  }
+
 }
