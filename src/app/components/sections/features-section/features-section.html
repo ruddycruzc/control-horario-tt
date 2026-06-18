@@ -1,1 +1,35 @@
-<p>features-section works!</p>
+<section class="features-section">
+
+  <div class="features-section__container">
+
+    <h2 class="features-section__title">
+
+      CARACTERÍS
+
+      <span class="text-pink">
+        TIC
+      </span>
+
+      AS DE LA HERRAMIENTA
+
+    </h2>
+
+    <div class="features-section__grid">
+
+      @for (
+        feature of features;
+        track feature.title
+      ) {
+
+        <app-feature-card
+          [title]="feature.title"
+          [image]="feature.image">
+        </app-feature-card>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

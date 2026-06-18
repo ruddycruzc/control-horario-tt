@@ -4,9 +4,10 @@ import { HeroJornadaSection } from "../../components/sections/hero-jornada-secti
 import { Footer } from "../../components/layout/footer/footer";
 import { ObjetivoSection } from "../../components/sections/objetivo-section/objetivo-section";
 import { VentajasSection } from '../../components/sections/ventajas-section/ventajas-section';
+import { FeaturesSection } from "../../components/sections/features-section/features-section";
 @Component({
   selector: 'app-home',
-  imports: [HeroJornadaSection, ObjetivoSection, VentajasSection],
+  imports: [HeroJornadaSection, ObjetivoSection, VentajasSection, FeaturesSection],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

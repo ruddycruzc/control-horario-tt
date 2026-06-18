@@ -9,7 +9,7 @@ export const FEATURES: Feature[] = [
       'CALENDARIO LABORAL',
 
     image:
-      '/images/features/calendario.png'
+      '/assets/images/features/calendario.png'
   },
 
   {
@@ -17,7 +17,7 @@ export const FEATURES: Feature[] = [
       'GESTIÓN DE VACACIONES',
 
     image:
-      '/images/features/vacaciones.png'
+      '/assets/images/features/vacaciones.png'
   },
 
   {
@@ -25,7 +25,7 @@ export const FEATURES: Feature[] = [
       'HISTÓRICO COMPLETO',
 
     image:
-      '/images/features/historico.png'
+      '/assets/images/features/historico.png'
   },
 
   {
@@ -33,7 +33,7 @@ export const FEATURES: Feature[] = [
       'CONCILIACIÓN FAMILIAR / PERMISOS',
 
     image:
-      '/images/features/permisos.png'
+      '/assets/images/features/permisos.png'
   }
 
 ];
