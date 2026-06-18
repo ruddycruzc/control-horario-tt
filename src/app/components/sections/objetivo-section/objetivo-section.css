@@ -1,16 +1,30 @@
 .objetivo-section {
-
-  background:url('../../../../assets/images/hero/fondo-objetivo-section.png');
-
-  padding:
-    var(--space-2xl)
-    var(--space-lg);
-
+  position: relative;
+  background-color: transparent; 
+  padding: 0 var(--space-lg) var(--space-2xl) var(--space-lg);
   display: flex;
-
   justify-content: flex-end;
+  align-items: center;
+  min-height: 600px;
+  overflow: hidden;
 }
 
+.objetivo-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../../assets/images/hero/fondo-objetivo-section.png');
+  background-size: cover; 
+  background-position: 20% center; 
+  z-index: -1; 
+}
+
+.objetivo-section > div {
+  margin-top: var(--space-2xl); 
+}
 .objetivo-section__container {
 
   width: 100%;
@@ -23,17 +37,14 @@
 }
 
 .objetivo-section__card {
-
   max-width: 650px;
-
-  background: white;
-
+  background: rgba(255, 255, 255, 0.5); 
+  backdrop-filter: blur(15px); 
+  -webkit-backdrop-filter: blur(15px); 
   border-radius: var(--radius-lg);
-
   padding: 3rem;
-
-  box-shadow:
-    0 20px 60px rgba(0,0,0,.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .objetivo-section__card h2 {
