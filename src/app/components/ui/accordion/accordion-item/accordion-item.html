@@ -1,0 +1,27 @@
+<div class="accordion-item">
+
+  <button
+    type="button"
+    (click)="toggle()">
+
+    {{ isOpen ? '-' : '+' }}
+
+    {{ title }}
+
+  </button>
+
+  @if (isOpen) {
+
+    <div class="accordion-content">
+
+      <p>
+
+        {{ content }}
+
+      </p>
+
+    </div>
+
+  }
+
+</div>

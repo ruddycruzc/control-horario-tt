@@ -1,1 +1,43 @@
-<p>ventajas-section works!</p>
+<section class="ventajas-section">
+
+  <div class="ventajas-section__container">
+
+    <div class="ventajas-section__content">
+
+      <h2>
+
+        {{ content.title }}
+
+      </h2>
+
+      <p>
+
+        {{ content.description }}
+
+      </p>
+
+      @for (
+        advantage of advantages;
+        track advantage.question
+      ) {
+
+        <app-accordion-item
+          [title]="advantage.question"
+          [content]="advantage.answer">
+        </app-accordion-item>
+
+      }
+
+    </div>
+
+    <div class="ventajas-section__image">
+
+      <img
+        [src]="content.image"
+        [alt]="content.title">
+
+    </div>
+
+  </div>
+
+</section>
