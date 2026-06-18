@@ -1,0 +1,55 @@
+.help-card {
+
+  background: white;
+
+  border-radius:
+    var(--radius-lg);
+
+  overflow: hidden;
+
+  text-align: center;
+
+  transition:
+    transform .3s ease;
+
+  height: 100%;
+}
+
+.help-card:hover {
+
+  transform:
+    translateY(-6px);
+}
+
+.help-card img {
+
+  width: 100%;
+
+  aspect-ratio: 1;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.help-card h3 {
+
+  color:
+    var(--color-primary);
+
+  padding-top:
+    var(--space-md);
+
+  margin-bottom:
+    var(--space-sm);
+}
+
+.help-card p {
+
+  padding:
+    0
+    var(--space-md)
+    var(--space-lg);
+
+  line-height: 1.6;
+}

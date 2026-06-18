@@ -1,0 +1,38 @@
+<section class="help-section">
+
+  <div class="help-section__container">
+
+    <h2>
+
+      {{ content.title }}
+
+      <span class="text-pink">
+
+        {{ content.highlightedWord }}
+
+      </span>
+
+      ?
+
+    </h2>
+
+    <div class="help-section__grid">
+
+      @for (
+        card of cards;
+        track card.title
+      ) {
+
+        <app-help-card
+          [title]="card.title"
+          [description]="card.description"
+          [image]="card.image">
+        </app-help-card>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

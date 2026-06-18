@@ -1,0 +1,64 @@
+.help-section {
+
+  background: #000;
+
+  padding:
+    var(--space-2xl)
+    var(--space-lg);
+
+}
+
+.help-section__container {
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+}
+
+.help-section h2 {
+
+  text-align: center;
+
+  color: white;
+
+  margin-bottom:
+    var(--space-xl);
+
+  font-size:
+    clamp(
+      2rem,
+      4vw,
+      3rem
+    );
+}
+
+.help-section__grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      1fr
+    );
+
+  gap:
+    var(--space-xl);
+}
+
+.text-pink {
+
+  color:
+    var(--color-primary);
+}
+
+@media (max-width: 768px) {
+
+  .help-section__grid {
+
+    grid-template-columns:
+      1fr;
+  }
+
+}
