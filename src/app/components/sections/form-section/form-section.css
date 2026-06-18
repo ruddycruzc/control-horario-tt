@@ -1,0 +1,83 @@
+.contacto-section {
+  background-image: url('../../../../assets/images/hero/cuadros.jpg');
+  background-size: 30px 30px;
+  background-repeat: repeat;
+  padding: 6rem 2rem;
+}
+
+.contacto-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); 
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-info h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+/* El color rosa que me pediste */
+.highlight {
+  color: #e13d62;
+  font-weight: 800;
+}
+
+.contacto-detalles p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+
+.contacto-form-card {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 3rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contacto-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contacto-form-card input, 
+.contacto-form-card textarea {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.contacto-form-card button {
+  padding: 1rem;
+  background: #ff6b9d;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.contacto-form-card button:hover {
+  background: #e65a88;
+  transform: translateY(-2px);
+}
