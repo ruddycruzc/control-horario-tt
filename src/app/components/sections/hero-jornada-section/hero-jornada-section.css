@@ -32,18 +32,15 @@
 }
 
 .hero-jornada__clock {
-
   color: white;
-
-  font-size:
-    clamp(4rem, 8vw, 8rem);
-
-  font-family:
-    monospace;
-
+  font-size: clamp(3rem, 6vw, 6rem); 
+  font-family: monospace;
   font-weight: 300;
-
   line-height: 1;
+  white-space: nowrap; 
+  display: flex;       
+  align-items: center;
+  gap: 10px;           
 }
 
 .hero-jornada__content {
