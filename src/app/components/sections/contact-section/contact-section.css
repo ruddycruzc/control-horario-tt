@@ -1,5 +1,8 @@
 .contact-container {
   background-color: var(--form-section-background);
+  position: relative;
+  z-index: 1;
+
   padding: var(--section-padding-y) var(--section-padding-x);
   display: flex;
   justify-content: center;
@@ -7,6 +10,20 @@
   width: 100%;
   box-sizing: border-box;
   font-family: var(--font-family-base);
+}
+
+.contact-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../../../assets/images/contacto/lineas.png');
+  background-repeat: repeat;
+  background-position: center;
+  opacity: 0.25; 
+  z-index: -1; 
 }
 
 .contact-content {
