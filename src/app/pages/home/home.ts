@@ -7,9 +7,10 @@ import { VentajasSection } from '../../components/sections/ventajas-section/vent
 import { FeaturesSection } from "../../components/sections/features-section/features-section";
 import { HelpSection } from "../../components/sections/help-section/help-section";
 import { ContactSection } from '../../components/sections/contact-section/contact-section';
+import { FaqSection } from "../../components/sections/faq-section/faq-section";
 @Component({
   selector: 'app-home',
-  imports: [HeroJornadaSection, ObjetivoSection, VentajasSection, FeaturesSection, HelpSection, Navbar, Footer, ContactSection],
+  imports: [HeroJornadaSection, ObjetivoSection, VentajasSection, FeaturesSection, HelpSection, Navbar, Footer, ContactSection, FaqSection],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
