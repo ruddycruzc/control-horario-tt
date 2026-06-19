@@ -11,11 +11,10 @@ import { HERO_JORNADA_CONTENT } from '../../../data/jornada/hero.data';
 export class HeroJornadaSection implements OnInit, OnDestroy {
   readonly hero = HERO_JORNADA_CONTENT;
   
-  // Mantenemos el nombre 'countdown' que espera tu HTML
   countdown = '15 : 00 : 00';
   typedText = '';
   
-  private intervalId?: number;
+  private animationFrameId?: number;
 
   constructor(private cdr: ChangeDetectorRef) {}
 
@@ -25,23 +24,22 @@ export class HeroJornadaSection implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
+    if (this.animationFrameId) {
+      cancelAnimationFrame(this.animationFrameId);
     }
   }
 
   private startCountdown(): void {
     const STORAGE_KEY = 'control-jornada-end-date';
-    
-    let endDate = localStorage.getItem(STORAGE_KEY);
-    let endTime = endDate ? Number(endDate) : (Date.now() + 15 * 60 * 1000);
+    const duration = 15 * 60 * 1000;
+    const endTime = Date.now() + duration;
     localStorage.setItem(STORAGE_KEY, endTime.toString());
 
-    this.intervalId = window.setInterval(() => {
+    const update = () => {
       const remaining = endTime - Date.now();
       
       if (remaining <= 0) {
-        this.updateDisplay(0, 0, 0);
+        this.countdown = '00 : 00 : 00';
         return;
       }
 
@@ -50,13 +48,15 @@ export class HeroJornadaSection implements OnInit, OnDestroy {
       const ms = Math.floor((remaining % 1000) / 10);
 
       this.updateDisplay(m, s, ms);
-      
       this.cdr.detectChanges();
-    }, 100);
+      
+      this.animationFrameId = requestAnimationFrame(update);
+    };
+
+    this.animationFrameId = requestAnimationFrame(update);
   }
 
   private updateDisplay(m: number, s: number, ms: number): void {
-    
     this.countdown = `${m.toString().padStart(2, '0')} : ${s.toString().padStart(2, '0')} : ${ms.toString().padStart(2, '0')}`;
   }
 

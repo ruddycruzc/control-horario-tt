@@ -1,9 +1,11 @@
 :root {
 
-  --radius-sm: 0.5rem;
+  --radius-sm: 12px;
 
-  --radius-md: 1rem;
+  --radius-md: 20px;
 
-  --radius-lg: 1.5rem;
+  --radius-lg: 30px;
+
+  --radius-pill: 999px;
 
 }

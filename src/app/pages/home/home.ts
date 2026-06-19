@@ -6,10 +6,10 @@ import { ObjetivoSection } from "../../components/sections/objetivo-section/obje
 import { VentajasSection } from '../../components/sections/ventajas-section/ventajas-section';
 import { FeaturesSection } from "../../components/sections/features-section/features-section";
 import { HelpSection } from "../../components/sections/help-section/help-section";
-import { FormSection } from '../../components/sections/form-section/form-section';
+import { ContactSection } from '../../components/sections/contact-section/contact-section';
 @Component({
   selector: 'app-home',
-  imports: [HeroJornadaSection, ObjetivoSection, VentajasSection, FeaturesSection, HelpSection, Navbar, FormSection, Footer],
+  imports: [HeroJornadaSection, ObjetivoSection, VentajasSection, FeaturesSection, HelpSection, Navbar, Footer, ContactSection],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

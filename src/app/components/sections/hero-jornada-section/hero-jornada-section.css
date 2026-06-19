@@ -1,147 +1,79 @@
 .hero-jornada {
-
   min-height: 100vh;
-
   background: #000;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
-  padding:
-    var(--space-xl)
-    var(--space-lg);
+  padding: var(--space-xl) var(--space-lg);
+  overflow-x: hidden; 
 }
 
 .hero-jornada__container {
-
   width: 100%;
-
   max-width: 1400px;
-
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-
   gap: var(--space-xl);
+}
+.hero-jornada__title {
+  color: white; 
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.9;
+  font-weight: 900;
 }
 
 .hero-jornada__clock {
   color: white;
-  font-size: clamp(3rem, 6vw, 6rem); 
+  font-size: clamp(2.5rem, 5vw, 5.5rem); 
   font-family: monospace;
   font-weight: 300;
   line-height: 1;
-  white-space: nowrap; 
+  white-space: normal; 
   display: flex;       
   align-items: center;
+  justify-content: flex-start; 
   gap: 10px;           
 }
 
 .hero-jornada__content {
-
   display: flex;
-
   flex-direction: column;
-
   gap: var(--space-md);
+  text-align: left;
 }
-
 .hero-jornada__badge {
-
-  color: var(--color-primary);
-
+  color: var(--color-primary) !important; 
   font-weight: 700;
-
   letter-spacing: 3px;
+  text-transform: uppercase; 
+  display: block;
+  margin-bottom: 0.5rem;
 }
-
-.hero-jornada__title {
-
-  color: white;
-
-  font-size:
-    clamp(4rem, 10vw, 8rem);
-
-  line-height: 0.9;
-
-  font-weight: 900;
-}
-
-.hero-jornada__indent-j {
-
-  display: inline-block;
-
-  padding-left: 3rem;
-}
-
-.hero-jornada__indent-l {
-
-  display: inline-block;
-
-  padding-left: 8rem;
-}
-
 .text-pink {
-
-  color: var(--color-primary);
+  color: var(--color-primary) !important;
 }
 
-.hero-jornada__cursor {
-
-  color: var(--color-primary);
-
-  animation:
-    blink .7s infinite;
-}
-
-@keyframes blink {
-
-  0%,
-  100% {
-
-    opacity: 1;
-  }
-
-  50% {
-
-    opacity: 0;
-  }
-
-}
 
 @media (max-width: 768px) {
-
   .hero-jornada__container {
+    grid-template-columns: 1fr;
+    text-align: center; 
+  }
 
-    grid-template-columns:
-      1fr;
+  .hero-jornada__clock {
+    order: 2;
+    font-size: clamp(2rem, 10vw, 4rem);
+    justify-content: center; 
+  }
 
-    text-align: center;
+  .hero-jornada__content {
+    order: 1;
+    align-items: center; 
   }
 
   .hero-jornada__indent-j,
   .hero-jornada__indent-l {
-
     padding-left: 0;
   }
-
-  .hero-jornada__clock {
-
-    order: 2;
-
-    font-size:
-      clamp(3rem, 12vw, 5rem);
-  }
-
-  .hero-jornada__content {
-
-    order: 1;
-  }
-
 }
