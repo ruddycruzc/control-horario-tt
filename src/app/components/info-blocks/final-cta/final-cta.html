@@ -1,0 +1,25 @@
+<div class="final-cta">
+  <span class="final-cta__shape final-cta__shape--one"></span>
+  <span class="final-cta__shape final-cta__shape--two"></span>
+  <span class="final-cta__shape final-cta__shape--three"></span>
+  <span class="final-cta__shape final-cta__shape--four"></span>
+
+  <h2>{{ content.title }}</h2>
+
+  @if (content.description) {
+    <p>{{ content.description }}</p>
+  }
+
+  <div style="position: relative; display: inline-block;">
+    
+    <app-button variant="primary">
+      {{ content.buttonLabel }} <span class="arrow">+</span>
+    </app-button>
+    
+    <a [href]="content.buttonLink" 
+       target="_blank" 
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; cursor: pointer;">
+    </a>
+
+  </div>
+</div>
