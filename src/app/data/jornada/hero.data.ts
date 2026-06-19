@@ -5,7 +5,7 @@ export const HERO_JORNADA_CONTENT: HeroJornadaContent = {
   badge:
     '[ TRANSFORMACIÓN ]',
   titleLineOne:
-    'CNTRL +',
+    'CTRL +',
   titleLineTwo:
     'JORNADA',
   highlightedWord:
