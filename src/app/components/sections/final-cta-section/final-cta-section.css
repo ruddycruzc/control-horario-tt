@@ -1,0 +1,5 @@
+.final-cta-section {
+  background: var(--color-bkg-black);
+  padding: var(--section-padding-y-mobile) var(--section-padding-x);
+  box-sizing: border-box;
+}
